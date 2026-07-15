@@ -1,0 +1,19 @@
+{
+  "name": "revogrid-scheduler-benchmark",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5181",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@revolist/revogrid": "latest",
+    "@revolist/rv-pro-trial": "latest",
+    "@revolist/rv-enterprise-trial": "latest"
+  },
+  "devDependencies": {
+    "vite": "^8.0.16"
+  }
+}

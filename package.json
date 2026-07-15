@@ -1,0 +1,12 @@
+{
+  "name": "scheduler-benchmark",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "node scripts/verify-scenarios.mjs"
+  },
+  "dependencies": {
+    "puppeteer-core": "^25.3.0"
+  }
+}
