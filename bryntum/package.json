@@ -12,6 +12,6 @@
     "vite": "^8.0.16"
   },
   "dependencies": {
-    "@bryntum/schedulerpro": "^7.3.3"
+    "@bryntum/schedulerpro": "npm:@bryntum/schedulerpro-trial@^7.3.3"
   }
 }
