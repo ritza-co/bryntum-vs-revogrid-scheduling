@@ -2,6 +2,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
     optimizeDeps : {
-        include : ['@bryntum/schedulerpro']
+        include : ['@bryntum/scheduler-enterprise']
     }
 });

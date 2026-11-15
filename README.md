@@ -1,4 +1,4 @@
-# Resource scheduling benchmark: Bryntum Scheduler Pro vs RevoGrid Gantt ("Scheduler")
+# Resource scheduling benchmark: Bryntum Scheduler vs RevoGrid Gantt ("Scheduler")
 
 There's one Vite app per product. Each app adapts the same 13 scenarios from
 `shared/scenarios.js` to its own API.
@@ -8,7 +8,7 @@ There's one Vite app per product. Each app adapts the same 13 scenarios from
 ```
 scheduler-benchmark/
 ├── shared/scenarios.js   # neutral scenario data (13 scenarios)
-├── bryntum/              # Bryntum Scheduler Pro vanilla JS app
+├── bryntum/              # Bryntum Scheduler (Enterprise tier) vanilla JS app
 ├── revogrid/             # RevoGrid Gantt + resource view vanilla JS app
 └── scripts/              # scenario data verification
 ```
@@ -37,12 +37,19 @@ scheduler-benchmark/
 # Verify the shared scenario data
 npm test
 
-# Bryntum app (Bryntum Scheduler Pro public trial version)
+# Bryntum app (Bryntum Scheduler 8 Enterprise, @bryntum/scheduler-enterprise)
 cd bryntum && npm install && npm run dev   # http://localhost:5180
 
 # RevoGrid app (Pro/Enterprise trial packages)
 cd revogrid && npm install && npm run dev  # http://localhost:5181
 ```
+
+### Bryntum license
+
+Bryntum packages are on the public npm registry, so `npm install` needs no login. The Enterprise tier runs as a
+fully functional trial for 14 days without a license key. [Request a free trial key](https://bryntum.com/download/)
+to extend the trial to 45 days. If you have a Bryntum license, add your license key as described in the
+[licensing guide](https://bryntum.com/docs/guide/Core/licensing).
 
 ### Installing the RevoGrid Pro component
 

@@ -1,4 +1,5 @@
-import { SchedulerPro, ProjectModel, ResourceHistogram, Splitter } from '@bryntum/schedulerpro';
+import { Scheduler, ProjectModel, ResourceHistogram } from '@bryntum/scheduler-enterprise';
+import { Splitter } from '@bryntum/core-enterprise';
 import { scenarios, calendars as sharedCalendars } from '../shared/scenarios.js';
 import './style.css';
 
@@ -41,11 +42,11 @@ function adaptProject(data) {
             duration          : e.durationDays,
             durationUnit      : 'day',
             manuallyScheduled : e.manuallyScheduled ?? false,
-            // Effort events: Scheduler Pro's EventModel supports 'Normal' and
+            // Effort events: the Enterprise tier EventModel supports 'Normal' and
             // 'FixedDuration' scheduling modes (FixedEffort/FixedUnits are
             // Bryntum GANTT task modes). FixedDuration + effortDriven keeps
-            // effort intact and rebalances assignment units - SP's documented
-            // effort model.
+            // effort intact and rebalances assignment units - Scheduler's
+            // documented effort model.
             ...(e.schedulingMode === 'fixed-work'
                 ? { schedulingMode : 'FixedDuration', effortDriven : true, effort : e.effortHours, effortUnit : 'hour' }
                 : {}),
@@ -108,7 +109,7 @@ async function loadScenario(id) {
 
     project = new ProjectModel(adaptProject(sc));
 
-    scheduler = new SchedulerPro({
+    scheduler = new Scheduler({
         appendTo   : appEl,
         project,
         startDate  : '2026-08-02',

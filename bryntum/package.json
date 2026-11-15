@@ -1,5 +1,5 @@
 {
-  "name": "bryntum-schedulerpro-benchmark",
+  "name": "bryntum-scheduler-benchmark",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -12,6 +12,7 @@
     "vite": "^8.0.16"
   },
   "dependencies": {
-    "@bryntum/schedulerpro": "npm:@bryntum/schedulerpro-trial@^7.3.3"
+    "@bryntum/core-enterprise": "8.0.1",
+    "@bryntum/scheduler-enterprise": "8.0.1"
   }
 }
